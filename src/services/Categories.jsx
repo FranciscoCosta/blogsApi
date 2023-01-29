@@ -5,6 +5,12 @@ const newCategoryS = async (name) => {
     return { error: null, id: category.null };
 };
 
+const findAllCategoryS = async () => {
+    const categories = await Category.findAll();
+    return categories;
+};
+
 module.exports = {
     newCategoryS,
+    findAllCategoryS,
 };
