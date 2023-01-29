@@ -22,7 +22,16 @@ const findAllUser = async () => {
     return users;
 };
 
+const findUser = async (id) => {
+    const user = await User.findOne({
+        where: { id },
+        attributes: { exclude: ['password'] },
+    });
+    return user;
+};
+
 module.exports = {
     newUser,
     findAllUser,
+    findUser,
 };
