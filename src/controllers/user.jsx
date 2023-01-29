@@ -12,6 +12,12 @@ const newUser = async (req, res) => {
     res.status(201).json({ token });
 };
 
+const findAllUser = async (_req, res) => {
+    const result = await userService.findAllUser();
+        return res.status(200).json(result);
+};
+
 module.exports = {
     newUser,
+    findAllUser,
 };

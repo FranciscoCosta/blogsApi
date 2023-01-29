@@ -15,6 +15,14 @@ const newUser = async ({ displayName, email, password, image }) => {
     return { error: null, token };
 };
 
+const findAllUser = async () => {
+    const users = User.findAll({
+        attributes: { exclude: ['password'] },  
+    });
+    return users;
+};
+
 module.exports = {
     newUser,
+    findAllUser,
 };
