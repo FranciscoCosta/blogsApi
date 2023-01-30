@@ -2,6 +2,7 @@ const express = require('express');
 const authRoute = require('./routes/auth.jsx');
 const userRoute = require('./routes/user.jsx');
 const categoryRoute = require('./routes/category.jsx');
+const postRoute = require('./routes/post.jsx');
 
 // Francisco Costa
 // ...
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use('/', authRoute);
 app.use('/', userRoute);
 app.use('/', categoryRoute);
+app.use('/', postRoute);
 
 // ...
 
